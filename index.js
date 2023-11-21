@@ -12,6 +12,8 @@ const PORT = process.env.PORT|| 4000
  //middleware
 server.use(express.json())
 server.use(router)
+// server.use("/uploads",express.static("/uploads"))
+server.use("/uploads",express.static("./uploads"))
 server.get('/',(req,res)=>{
     res.send(`EMS Server Started!!!`)
 })
